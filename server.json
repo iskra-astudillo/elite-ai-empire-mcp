@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.eliteaiempire/elite-ai-empire",
+  "title": "Elite AI Empire",
+  "description": "Find the product server and connection guide for an Elite AI Empire task.",
+  "version": "1.0.0",
+  "websiteUrl": "https://auth.eliteaiempire.com/mcp-docs/elite-ai-empire",
+  "repository": {
+    "url": "https://github.com/iskra-astudillo/elite-ai-empire-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://auth.eliteaiempire.com/mcp/elite-ai-empire",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "MCP read key from the connection guide.",
+          "value": "Bearer {read_key}",
+          "isRequired": true,
+          "variables": {
+            "read_key": {
+              "description": "Your MCP read key",
+              "isRequired": true,
+              "isSecret": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
